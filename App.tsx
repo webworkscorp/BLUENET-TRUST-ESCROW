@@ -1,8 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import JaguarShowcase from './components/JaguarShowcase';
 import Services from './components/Services';
 import Rates from './components/Rates';
 import Methodology from './components/Methodology';
@@ -64,35 +64,37 @@ const AppContent: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-transparent min-h-screen flex flex-col relative">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <About />
-        <Services />
-        <Rates />
-        <div className="relative">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="https://i.imgur.com/4h58muW.jpeg" 
-              alt="Background Methodology and Contact" 
-              className="w-full h-full object-cover brightness-[0.65]"
-              style={{ 
-                imageRendering: 'crisp-edges',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden'
-              }}
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
-          </div>
-          
-          <div className="relative z-10">
-            <Methodology />
-            <ConsultationForm />
-          </div>
-        </div>
-      </main>
-      <Footer />
+    <div className="min-h-screen flex flex-col relative bg-white">
+      {/* Fondo Global Nítido y Profesional sin desenfoque */}
+      <div className="fixed inset-0 z-0">
+        <img 
+          src="https://i.imgur.com/XZrZLyI.jpeg" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+          style={{ 
+            imageRendering: 'high-quality',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden'
+          }}
+        />
+        {/* Overlay optimizado: eliminamos backdrop-blur y ajustamos opacidad para nitidez extrema */}
+        <div className="absolute inset-0 bg-white/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-transparent"></div>
+      </div>
+      
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Hero />
+          <About />
+          <JaguarShowcase />
+          <Services />
+          <Rates />
+          <Methodology />
+          <ConsultationForm />
+        </main>
+        <Footer />
+      </div>
       <LanguageSwitcher />
     </div>
   );
