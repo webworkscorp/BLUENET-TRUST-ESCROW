@@ -8,10 +8,11 @@ import Rates from './components/Rates';
 import Methodology from './components/Methodology';
 import ConsultationForm from './components/ConsultationForm';
 import Footer from './components/Footer';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import { LanguageProvider } from './context/LanguageContext';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   useEffect(() => {
-    // 1. Gestionar el revelado por scroll mediante IntersectionObserver
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -27,7 +28,6 @@ const App: React.FC = () => {
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // 2. NAVEGACIÓN SEGURA: Interceptamos clics para desplazamiento suave
     const handleGlobalClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
@@ -64,16 +64,14 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-transparent min-h-screen flex flex-col">
+    <div className="bg-transparent min-h-screen flex flex-col relative">
       <Navbar />
       <main className="flex-grow">
         <Hero />
         <About />
         <Services />
         <Rates />
-        {/* Contenedor Unificado para Metodología y Agendar Consulta */}
         <div className="relative">
-          {/* Fondo Compartido Continuo */}
           <div className="absolute inset-0 z-0">
             <img 
               src="https://i.imgur.com/4h58muW.jpeg" 
@@ -85,7 +83,6 @@ const App: React.FC = () => {
                 backfaceVisibility: 'hidden'
               }}
             />
-            {/* Capa de contraste para legibilidad en toda el área */}
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
           
@@ -96,8 +93,15 @@ const App: React.FC = () => {
         </div>
       </main>
       <Footer />
+      <LanguageSwitcher />
     </div>
   );
 };
+
+const App: React.FC = () => (
+  <LanguageProvider>
+    <AppContent />
+  </LanguageProvider>
+);
 
 export default App;

@@ -1,24 +1,27 @@
 
 import React from 'react';
-import { METHODOLOGY } from '../constants';
+import { getMethodology } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
 
 const Methodology: React.FC = () => {
+  const { t } = useLanguage();
+  const methodology = getMethodology(t);
+
   return (
     <section id="metodologia" className="relative py-24 md:py-32 overflow-hidden bg-transparent">
-      {/* Background logic removed to use parent container's background */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-xl">
-            <h2 className="text-brand-accent text-xs font-black uppercase tracking-[0.3em] mb-4 drop-shadow-sm">FORMA DE TRABAJO</h2>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight drop-shadow-md">Un proceso estructurado para su tranquilidad</h3>
+            <h2 className="text-brand-accent text-xs font-black uppercase tracking-[0.3em] mb-4 drop-shadow-sm">{t('methodology.tag')}</h2>
+            <h3 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight drop-shadow-md">{t('methodology.title')}</h3>
           </div>
           <p className="text-gray-200 max-w-sm text-base font-semibold border-l-4 border-brand-accent pl-6 drop-shadow-sm">
-            Nuestra metodología garantiza que ningún detalle quede al azar, proporcionando un seguimiento continuo y profesional.
+            {t('methodology.description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-          {METHODOLOGY.map((step, index) => (
+          {methodology.map((step: any, index: number) => (
             <div key={index} className="relative group">
               <span className="text-7xl font-sans font-black text-brand-accent/20 absolute -top-8 left-0 transition-colors group-hover:text-brand-accent/40">
                 {step.number}
