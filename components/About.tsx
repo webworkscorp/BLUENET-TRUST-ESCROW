@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Shield } from 'lucide-react';
+import { BadgeCheck, Linkedin } from 'lucide-react';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
   const cvUrl = "https://docs.google.com/document/d/1FELeDCGHe3H-wLs9mtx3cvCd9AnEDsvp/edit?usp=share_link&ouid=107225819394273584446&rtpof=true&sd=true";
+  const linkedinUrl = "https://www.linkedin.com/in/mauricio-ram%C3%ADrez-rodr%C3%ADguez-654a5b62?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+  const mauricioImageUrl = "https://i.imgur.com/uzMVEZp.jpeg";
 
   return (
     <section 
@@ -12,9 +14,9 @@ const About: React.FC = () => {
       className="relative py-28 md:py-40 reveal overflow-visible bg-transparent"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
           
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div className="mb-12">
               <h2 className="text-brand-accent text-[10px] font-black uppercase tracking-[0.5em] mb-6 flex items-center gap-4">
                 <span className="w-8 h-[1px] bg-brand-accent"></span>
@@ -36,7 +38,7 @@ const About: React.FC = () => {
               {/* Cuadro de Mauricio - Contenedor con profundidad */}
               <div className="relative bg-white/90 backdrop-blur-xl p-8 md:p-14 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] flex flex-col md:flex-row items-center gap-12 border border-white/40">
                 
-                {/* Imagen Indígena Decorativa (A color, estática, más arriba) */}
+                {/* Imagen Indígena Decorativa */}
                 <img 
                   src="https://i.imgur.com/fvrceVF.png" 
                   alt="Decoración" 
@@ -45,12 +47,13 @@ const About: React.FC = () => {
 
                 <div className="relative flex-shrink-0 z-10">
                   <img 
-                    src="https://i.imgur.com/bl6LoRR.jpeg" 
+                    src={mauricioImageUrl} 
                     alt="Mauricio Ramírez - Director" 
                     className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover shadow-2xl border-4 border-white/50"
                   />
+                  {/* Icono de Insignia de Verificación (BadgeCheck) - Estilo Premium */}
                   <div className="absolute -bottom-2 -right-2 bg-brand-accent text-white p-4 rounded-full border-4 border-white shadow-xl">
-                    <Shield className="w-6 h-6" />
+                    <BadgeCheck className="w-6 h-6" />
                   </div>
                 </div>
                 
@@ -67,14 +70,26 @@ const About: React.FC = () => {
                     {t('about.quote')}
                   </p>
                   
-                  <a 
-                    href={cvUrl} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-10 py-4 bg-brand-accent text-white text-[10px] font-black uppercase tracking-[0.3em] hover:bg-brand-accentLight transition-all duration-300 shadow-lg"
-                  >
-                    {t('about.viewCV')}
-                  </a>
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a 
+                      href={cvUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-10 py-4 bg-brand-accent text-white text-[10px] font-black uppercase tracking-[0.3em] hover:bg-brand-accentLight transition-all duration-300 shadow-lg"
+                    >
+                      {t('about.viewCV')}
+                    </a>
+                    
+                    <a 
+                      href={linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-12 h-12 bg-white text-brand-primary border border-gray-100 hover:text-brand-accent hover:border-brand-accent transition-all duration-300 shadow-lg group"
+                      title="LinkedIn Profile"
+                    >
+                      <Linkedin size={20} className="transition-transform group-hover:scale-110" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,16 +114,17 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative hidden lg:block self-start sticky top-32">
+          <div className="lg:col-span-6 relative hidden lg:block self-start sticky top-32">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=2070&auto=format&fit=crop" 
-                alt="Modern Architecture Detail" 
-                className="w-full h-[650px] object-cover grayscale brightness-90 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)] rounded-sm"
+                src={mauricioImageUrl} 
+                alt="Mauricio Ramírez - Portada" 
+                className="w-full h-[800px] object-cover grayscale brightness-90 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] rounded-sm"
+                style={{ objectPosition: 'center top' }}
               />
-              <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-brand-primary/5 mix-blend-overlay"></div>
               
-              <div className="absolute -bottom-10 -left-10 bg-brand-primary p-12 text-white shadow-3xl max-w-xs border-l-8 border-brand-accent">
+              <div className="absolute -bottom-10 -right-10 bg-brand-primary p-12 text-white shadow-3xl max-w-xs border-r-8 border-brand-accent text-right">
                 <p className="text-5xl font-serif font-bold mb-2">{t('about.years')}</p>
                 <p className="text-[10px] uppercase tracking-[0.4em] font-black text-brand-accent mb-6">{t('about.yearsTag')}</p>
                 <p className="text-gray-400 text-xs leading-relaxed font-medium">
