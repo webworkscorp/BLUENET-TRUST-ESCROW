@@ -1,49 +1,28 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
-  const { t, language } = useLanguage();
-  const whatsappNumber = "50683921000";
-  const whatsappMessage = encodeURIComponent(
-    language === 'es' 
-    ? "Hola BLUENET trust & escrow, me gustaría solicitar una consulta profesional."
-    : "Hello BLUENET trust & escrow, I would like to request a professional consultation."
-  );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const { t } = useLanguage();
 
   return (
     <footer id="contacto" className="bg-white text-brand-primary pt-24 pb-12 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 mb-20">
           <div className="lg:col-span-1">
-             <div className="flex flex-col mb-6">
+             <div className="flex flex-col mb-8">
                 <a href="#inicio" className="block transition-transform hover:scale-105">
                   <img 
                     src="https://i.imgur.com/hJexHat.jpeg" 
                     alt="BLUENET" 
-                    className="h-20 w-auto object-contain self-start mb-4"
+                    className="h-20 w-auto object-contain self-start mb-6"
                   />
                 </a>
-              </div>
-              <div className="flex space-x-4 mt-8">
-                <a 
-                  href={whatsappUrl}
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 border border-gray-300 flex items-center justify-center rounded-full hover:bg-brand-accent hover:text-white transition-all text-brand-primary" 
-                  title="WhatsApp"
-                >
-                  <svg viewBox="0 0 448 512" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.1-8.5-44-27.1-16.2-14.5-27.1-32.3-30.3-37.8-3.2-5.5-.3-8.5 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-                  </svg>
-                </a>
-                <a href="#!" className="w-10 h-10 border border-gray-300 flex items-center justify-center rounded-full hover:bg-brand-accent hover:text-white transition-all" onClick={(e) => e.preventDefault()}>
-                  <Facebook size={18} />
-                </a>
-                <a href="#!" className="w-10 h-10 border border-gray-300 flex items-center justify-center rounded-full hover:bg-brand-accent hover:text-white transition-all" onClick={(e) => e.preventDefault()}>
-                  <Instagram size={18} />
-                </a>
+                
+                {/* Aviso Legal - Bloque de Cumplimiento Regulatorio */}
+                <div className="mt-4 text-[10px] text-gray-500 leading-relaxed font-medium uppercase tracking-tight max-w-xl text-justify border-l-2 border-brand-accent/20 pl-4 py-1">
+                  {t('footer.legalNotice')}
+                </div>
               </div>
           </div>
 
@@ -57,9 +36,9 @@ const Footer: React.FC = () => {
                   <span className="text-brand-accent text-[10px] font-black uppercase tracking-widest bg-brand-accent/5 px-2 py-0.5 rounded">Director</span>
                 </div>
                 <div className="flex flex-col gap-2 pl-1">
-                  <a href="mailto:mramirez@bluenet.com" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-medium">
+                  <a href="mailto:mramirez@bluenetcr.com" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-medium">
                     <Mail size={14} className="text-brand-accent" />
-                    mramirez@bluenet.com
+                    mramirez@bluenetcr.com
                   </a>
                   <a href="tel:+50683921000" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-bold">
                     <Phone size={14} className="text-brand-accent" />
@@ -75,9 +54,9 @@ const Footer: React.FC = () => {
                   <span className="text-brand-accent text-[10px] font-black uppercase tracking-widest bg-brand-accent/5 px-2 py-0.5 rounded">Director</span>
                 </div>
                 <div className="flex flex-col gap-2 pl-1">
-                  <a href="mailto:jaguilar@bluenet.com" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-medium">
+                  <a href="mailto:jaguilar@bluenetcr.com" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-medium">
                     <Mail size={14} className="text-brand-accent" />
-                    jaguilar@bluenet.com
+                    jaguilar@bluenetcr.com
                   </a>
                 </div>
               </div>

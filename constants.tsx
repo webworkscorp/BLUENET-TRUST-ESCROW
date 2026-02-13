@@ -108,7 +108,8 @@ export const TRANSLATIONS: any = {
       contact: 'Contacto',
       rights: '© {year} BLUENET Trust & Escrow. Todos los derechos reservados.',
       privacy: 'Privacidad',
-      terms: 'Términos'
+      terms: 'Términos',
+      legalNotice: 'AVISO LEGAL: La inscripción de BLUENET con cédula jurídica número 3-102-865903 ante la Superintendencia General de Entidades Financieras (SUGEF) no es una autorización para operar, y la supervisión que ejerce esa Superintendencia es sólo en materia de prevención de legitimación de capitales, financiamiento al terrorismo y financiamiento de la proliferación de armas de destrucción masiva, según lo dispuesto en la Ley N° 7786, ¨Ley sobre estupefacientes, sustancias psicotrópicas, drogas de uso no autorizado, actividades conexas, legitimación de capitales y financiamiento al terrorismo¨. Por lo tanto, la SUGEF no supervisa los negocios que ofrece y realiza la empresa, ni su seguridad, estabilidad o solvencia. Las personas que contraten sus productos y servicios lo hacen bajo su cuenta y riesgo. Todo lo anterior es entendido por las partes contratantes.'
     },
     finance: {
       label: 'Tipo de Cambio',
@@ -141,7 +142,7 @@ export const TRANSLATIONS: any = {
       title: 'BLUENET',
       subtitle: 'TRUST & ESCROW',
       p1: 'Since 1995, our Director has been part of the fiduciary services industry, participating in structures of great complexity.',
-      p2: 'Nuestro enfoque se basa en el cumplimiento regulatorio establecido por las Autoridades Costarricenses para este tipo de negocios.',
+      p2: 'Our focus is based on regulatory compliance established by the Costa Rican Authorities for this type of business.',
       featured: 'At Bluenet trust & escrow we create custom solutions and focus on performing as a "good father of a family" or business manager as appropriate.',
       director: 'Director of Banking and Finance',
       quote: '"Integrity is the only asset that cannot depreciate. We lead with transparency to protect the future of your assets."',
@@ -213,7 +214,8 @@ export const TRANSLATIONS: any = {
       contact: 'Contact',
       rights: '© {year} BLUENET Trust & Escrow. All rights reserved.',
       privacy: 'Privacy',
-      terms: 'Terms'
+      terms: 'Terms',
+      legalNotice: 'LEGAL NOTICE: The registration of BLUENET with legal ID number 3-102-865903 before the General Superintendency of Financial Entities (SUGEF) is not an authorization to operate, and the supervision exercised by said Superintendency is only in matters of prevention of money laundering, financing of terrorism, and financing of the proliferation of weapons of mass destruction, as provided in Law No. 7786, "Law on narcotics, psychotropic substances, unauthorized drugs, related activities, money laundering, and financing of terrorism." Therefore, SUGEF does not supervise the businesses offered and carried out by the company, nor its safety, stability, or solvency. Persons who contract its products and services do so at their own risk. All of the above is understood by the contracting parties.'
     },
     finance: {
       label: 'Exchange Rate',
