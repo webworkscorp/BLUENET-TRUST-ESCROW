@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
              <div className="flex flex-col mb-8">
                 <a href="#inicio" className="block transition-transform hover:scale-105">
                   <img 
-                    src="https://i.imgur.com/hJexHat.jpeg" 
+                    src="https://i.imgur.com/nAt78Po.png" 
                     alt="BLUENET" 
                     className="h-20 w-auto object-contain self-start mb-6"
                   />
