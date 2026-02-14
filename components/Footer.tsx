@@ -58,6 +58,10 @@ const Footer: React.FC = () => {
                     <Mail size={14} className="text-brand-accent" />
                     jaguilar@bluenetcr.com
                   </a>
+                  <a href="tel:+50686595546" className="flex items-center gap-3 text-sm text-gray-600 hover:text-brand-accent transition-colors font-bold">
+                    <Phone size={14} className="text-brand-accent" />
+                    tel (506) 8659 5546
+                  </a>
                 </div>
               </div>
             </div>
