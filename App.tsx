@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import JaguarShowcase from './components/JaguarShowcase';
 import Services from './components/Services';
 import Rates from './components/Rates';
 import Methodology from './components/Methodology';
@@ -87,7 +86,6 @@ const AppContent: React.FC = () => {
         <main className="flex-grow">
           <Hero />
           <About />
-          <JaguarShowcase />
           <Services />
           <Rates />
           <Methodology />
