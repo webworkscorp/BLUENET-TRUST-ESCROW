@@ -28,7 +28,7 @@ const Rates: React.FC = () => {
               </h4>
               
               <div className="mb-8 relative z-10">
-                <div className="flex items-baseline gap-2 mb-2">
+                <div className="flex items-baseline gap-2 mb-3">
                   <span className="text-4xl font-serif font-bold text-brand-primary tracking-tighter">
                     {rate.price}
                   </span>
@@ -37,12 +37,17 @@ const Rates: React.FC = () => {
                   </span>
                 </div>
                 
-                {/* IVA Destacado - Como algo importante y no parte de la tarifa simple */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-accent/10 rounded-full">
-                  <Info className="w-3.5 h-3.5 text-brand-accent" />
-                  <span className="text-[9px] font-black text-brand-accent uppercase tracking-wider">
-                    {t('rates.iva')}
-                  </span>
+                {/* IVA y Nota de Moneda - Información de pago integrada */}
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-accent/10 rounded-full">
+                    <Info className="w-3.5 h-3.5 text-brand-accent" />
+                    <span className="text-[9px] font-black text-brand-accent uppercase tracking-wider">
+                      {t('rates.iva')}
+                    </span>
+                  </div>
+                  <p className="text-[8.5px] font-bold text-gray-400 uppercase tracking-wider leading-relaxed max-w-[240px]">
+                    {t('rates.currencyNote')}
+                  </p>
                 </div>
               </div>
               
@@ -66,11 +71,11 @@ const Rates: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center space-y-4 max-w-3xl mx-auto opacity-70">
+        <div className="mt-16 text-center space-y-4 max-w-3xl mx-auto opacity-70 border-t border-gray-200/50 pt-8">
           <p className="text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black leading-relaxed italic">
             {t('rates.disclaimer')}
           </p>
-          <p className="text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black leading-relaxed border-t border-gray-200/50 pt-4">
+          <p className="text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black leading-relaxed">
             {t('rates.tariffsNote')}
           </p>
         </div>

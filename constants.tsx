@@ -68,6 +68,7 @@ export const TRANSLATIONS: any = {
       cta: 'Solicitar Consultoría',
       disclaimer: '(Cualquier gasto adicional será asumido completamente por el cliente)',
       tariffsNote: 'Para servicios legales, notariales y contables conexos aplican los Aranceles Profesionales del Sector.',
+      currencyNote: 'También pueden pagarse en colones costarricenses al tipo de cambio de referencia de venta del BCR de ese día.',
       period: 'MÍNIMO',
       iva: 'Más el 13.00% del Impuesto al Valor Agregado',
       features: {
@@ -175,6 +176,7 @@ export const TRANSLATIONS: any = {
       cta: 'Request Consulting',
       disclaimer: '(Any additional expense will be fully assumed by the client)',
       tariffsNote: 'For related legal, notary, and accounting services, Professional Sector Tariffs apply.',
+      currencyNote: 'Payments can also be made in Costa Rican colones at the BCR\'s reference selling exchange rate of that day.',
       period: 'MINIMUM',
       iva: 'Plus 13.00% Value Added Tax',
       features: {
