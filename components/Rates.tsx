@@ -66,9 +66,14 @@ const Rates: React.FC = () => {
           ))}
         </div>
         
-        <p className="text-center mt-16 text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black max-w-2xl mx-auto leading-relaxed italic opacity-70">
-          {t('rates.disclaimer')}
-        </p>
+        <div className="mt-16 text-center space-y-4 max-w-3xl mx-auto opacity-70">
+          <p className="text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black leading-relaxed italic">
+            {t('rates.disclaimer')}
+          </p>
+          <p className="text-[11px] text-brand-neutralDark uppercase tracking-[0.2em] font-black leading-relaxed border-t border-gray-200/50 pt-4">
+            {t('rates.tariffsNote')}
+          </p>
+        </div>
       </div>
     </section>
   );

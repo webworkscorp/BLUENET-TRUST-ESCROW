@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import InstitutionalShowcase from './components/InstitutionalShowcase';
 import About from './components/About';
 import Services from './components/Services';
 import Rates from './components/Rates';
@@ -64,7 +65,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative bg-white">
-      {/* Fondo Global Nítido y Profesional sin desenfoque */}
+      {/* Fondo Global Nítido y Profesional */}
       <div className="fixed inset-0 z-0">
         <img 
           src="https://i.imgur.com/XZrZLyI.jpeg" 
@@ -76,7 +77,6 @@ const AppContent: React.FC = () => {
             backfaceVisibility: 'hidden'
           }}
         />
-        {/* Overlay optimizado: eliminamos backdrop-blur y ajustamos opacidad para nitidez extrema */}
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-transparent"></div>
       </div>
@@ -86,6 +86,7 @@ const AppContent: React.FC = () => {
         <main className="flex-grow">
           <Hero />
           <About />
+          <InstitutionalShowcase />
           <Services />
           <Rates />
           <Methodology />
